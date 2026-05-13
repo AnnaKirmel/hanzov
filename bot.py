@@ -7,7 +7,7 @@ from aiohttp import web
 # Бот берет настройки из переменных окружения сервера
 BOT_TOKEN = "8775863717:AAFEA4T1bca5mYvLDs283PpWOn2bJTSKxcY"
 # Превращаем ID группы в число. Если переменной нет, ставим 0
-GROUP_ID = -1003786096127
+GROUP_ID = -1003786096127_26
 
 if not BOT_TOKEN or GROUP_ID == 0:
     raise ValueError("Ошибки в настройках! Проверьте переменные BOT_TOKEN и GROUP_ID в панели Render.")
@@ -36,6 +36,7 @@ def setup_schedule():
     scheduler.add_job(send_reminder, "cron", hour=20, minute=0, args=["👑 Время: 20:00 — Царь!"])
     scheduler.add_job(send_reminder, "cron", hour=20, minute=0, args=["🐍 Время: 20:00 — Питон!"])
     scheduler.add_job(send_reminder, "cron", hour=22, minute=0, args=["🛒 Время: 22:00 — Повозки!"])
+    scheduler.add_job(send_reminder, "cron", hour=22, minute=6, args=["🛒 Время: 22:00 — Повозки!"])
 
 
 async def main():
