@@ -36,7 +36,7 @@ def setup_schedule():
     scheduler.add_job(send_reminder, "cron", hour=20, minute=0, args=["👑 Время: 20:00 — Царь!"])
     scheduler.add_job(send_reminder, "cron", hour=20, minute=0, args=["🐍 Время: 20:00 — Питон!"])
     scheduler.add_job(send_reminder, "cron", hour=22, minute=0, args=["🛒 Время: 22:00 — Повозки!"])
-    scheduler.add_job(send_reminder, "cron", hour=22, minute=6, args=["🛒 Время: 22:00 — Повозки!"])
+    scheduler.add_job(send_reminder, "cron", hour=22, minute=10, args=["🛒 Время: 22:00 — Повозки!"])
 
 
 async def main():
